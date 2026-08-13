@@ -1,0 +1,48 @@
+:root{
+  --paper:#FBF8F1;
+  --ink:#0B1120;
+  --jade:#17B57E;
+  --marigold:#F5A524;
+  --vermilion:#FF4B3E;
+  --sky:#5B8CFF;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+  --display:'Bricolage Grotesque','Inter Tight',sans-serif;
+  --body:'Inter Tight',system-ui,-apple-system,sans-serif;
+  --fg:#F2EEE4;
+  --fg-soft:#98A2BA;
+  --line:rgba(255,255,255,.14);
+  --line-soft:rgba(255,255,255,.07);
+  --panel:rgba(10,15,27,.62);
+  --field:rgba(255,255,255,.055);
+  --r:18px;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+html[data-mode="guest"]{--accent:var(--marigold);--on-accent:#17110A}
+html[data-mode="staff"]{--accent:var(--sky);--on-accent:#FFFFFF}
+body{
+  font-family:var(--body);color:var(--fg);min-height:100vh;overflow-x:hidden;
+  background:#070B14;-webkit-font-smoothing:antialiased;
+}
+.backdrop{position:fixed;inset:0;z-index:0;overflow:hidden}
+.shot{
+  position:absolute;inset:-4%;background-size:cover;background-position:center;
+  opacity:0;transition:opacity 1.4s var(--ease);
+  filter:saturate(.45) contrast(1.06) brightness(.72);
+  animation:drift 46s ease-in-out infinite alternate;
+}
+.shot.guest{background-image:url("https://images.unsplash.com/photo-1492538368677-f6e0afe31dcc?auto=format&fit=crop&w=2000&q=70")}
+.shot.staff{background-image:url("https://images.unsplash.com/photo-1519452575417-564c1401ecc0?auto=format&fit=crop&w=2000&q=70");animation-direction:alternate-reverse}
+html[data-mode="guest"] .shot.guest{opacity:.5}
+html[data-mode="staff"] .shot.staff{opacity:.4}
+.scrim{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(1100px 700px at 78% -10%,color-mix(in srgb,var(--accent) 20%,transparent),transparent 62%),
+    linear-gradient(180deg,rgba(7,11,20,.74) 0%,rgba(7,11,20,.9) 55%,#070B14 100%);
+  transition:background .9s var(--ease);
+}
+.grain{
+  position:absolute;inset:0;opacity:.5;
+  background-image:repeating-linear-gradient(0deg,transparent 0 3px,rgba(255,255,255,.012) 3px 4px);
+}
+.shell{position:relative;z-index:1;max-width:1240px;margin:0 auto;padding:0 24px 100px}

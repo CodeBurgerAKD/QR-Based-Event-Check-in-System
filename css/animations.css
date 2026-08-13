@@ -1,0 +1,21 @@
+@keyframes drift{from{transform:scale(1.06) translate3d(0,0,0)}to{transform:scale(1.16) translate3d(-2%,-2%,0)}}
+@keyframes pop{from{transform:scale(0)}to{transform:scale(1)}}
+@keyframes ping{0%{transform:scale(.6);opacity:1}100%{transform:scale(1.9);opacity:0}}
+@keyframes viewIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes swipe{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes dealIn{from{opacity:0;transform:rotateY(24deg) rotateX(10deg) translateY(40px)}to{opacity:1;transform:none}}
+@keyframes sheen{0%{transform:translateX(-120%)}22%,100%{transform:translateX(120%)}}
+@keyframes flipin{0%{transform:rotateX(-92deg);opacity:0}60%{transform:rotateX(12deg);opacity:1}100%{transform:none}}
+@keyframes shake{10%,90%{transform:translateX(-3px)}30%,70%{transform:translateX(5px)}50%{transform:translateX(-5px)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes nfIn{from{opacity:0;transform:scale(.86) translateY(20px)}to{opacity:1;transform:none}}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes drain{from{transform:scaleX(1)}to{transform:scaleX(0)}}
+@keyframes brk{0%,100%{opacity:.45;transform:scale(1)}50%{opacity:1;transform:scale(1.08)}}
+@keyframes sweep{0%,100%{top:14%}50%{top:85%}}
+@keyframes flash{0%{opacity:.85}100%{opacity:0}}
+@keyframes slam{0%{opacity:0;transform:scale(1.16)}55%{opacity:1;transform:scale(.98)}100%{transform:scale(1)}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes rowIn{from{opacity:0;transform:translateX(-14px)}to{opacity:1;transform:none}}
+@keyframes toastIn{from{opacity:0;transform:translateY(22px) scale(.94)}to{opacity:1;transform:none}}
